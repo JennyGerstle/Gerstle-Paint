@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<GridPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Gerstle.paint.PaintController">
+    <Button mnemonicParsing="false" text="Clear" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+    <ColorPicker GridPane.columnIndex="2" GridPane.rowIndex="0">
+       <value>
+          <Color />
+       </value>
+    </ColorPicker>
+    <ComboBox onMouseClicked="#ShowOptions" prefHeight="26.0" prefWidth="189.0" promptText="Draw" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+    <Canvas height="400.0" width="600.0" GridPane.columnIndex="0" GridPane.columnSpan="9" GridPane.rowIndex="1" />
+</GridPane>
