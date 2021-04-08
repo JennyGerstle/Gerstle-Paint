@@ -9,6 +9,7 @@ import javafx.scene.control.ColorPicker;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import javafx.scene.paint.Color;
 
 public class PaintController
 {
@@ -17,11 +18,13 @@ public class PaintController
     @FXML
     private ColorPicker colorPic;
     @FXML
-    private Button LineButton;
+    private CheckBox LineCheckBox;
     @FXML
     private CheckBox EraseCheckBox;
     @FXML
     private Text brushSizeText;
+    @FXML
+    private Button clear;
 
     public void initialize()
     {
@@ -55,5 +58,12 @@ public class PaintController
         {
             return 10;
         }
+    }
+
+    public void clearAll(MouseEvent mouseEvent)
+    {
+        GraphicsContext graphics = canvas.getGraphicsContext2D();
+        graphics.setFill(Color.WHITE);
+        graphics.fillRect(0, 1, canvas.getHeight(), canvas.getWidth());
     }
 }

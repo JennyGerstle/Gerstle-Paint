@@ -14,6 +14,7 @@
           <Color />
        </value>
     </ColorPicker>
-    <Button mnemonicParsing="false" text="/" GridPane.columnIndex="8" GridPane.rowIndex="0" />
-    <Canvas height="550.0" onMouseClicked="#colorDots" onMouseDragged="#color" width="750.0" GridPane.columnIndex="0" GridPane.columnSpan="9" GridPane.rowIndex="1" />
+    <CheckBox mnemonicParsing="false" text="/" GridPane.columnIndex="8" GridPane.rowIndex="0" />
+    <Button onMouseClicked="#clearAll" mnemonicParsing="false" text="clear" GridPane.columnIndex="8" GridPane.rowIndex="0" />
+    <Canvas height="550.0" width="750.0" GridPane.columnIndex="0" GridPane.columnSpan="9" GridPane.rowIndex="1" />
 </GridPane>
