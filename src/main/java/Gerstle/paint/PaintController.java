@@ -6,7 +6,6 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ColorPicker;
-import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.scene.paint.Color;
@@ -14,17 +13,17 @@ import javafx.scene.paint.Color;
 public class PaintController
 {
     @FXML
-    private Canvas canvas;
+    private CheckBox eraserCheckbox;
+    @FXML
+    private Text brushSize;
     @FXML
     private ColorPicker colorPic;
     @FXML
-    private CheckBox LineCheckBox;
+    private CheckBox lineCheckBox;
     @FXML
-    private CheckBox EraseCheckBox;
+    private Button clearAll;
     @FXML
-    private Text brushSizeText;
-    @FXML
-    private Button clear;
+    private Canvas canvas;
 
     public void initialize()
     {
@@ -32,12 +31,12 @@ public class PaintController
 
         canvas.setOnMouseDragged(event ->
         {
-            double size = checkSize(brushSizeText.getText());
-            brushSizeText.setText(Double.toString(size));
+            double size = checkSize(brushSize.getText());
+            brushSize.setText(Double.toString(size));
             double x = event.getX() - size/2;
             double y = event.getY() - size/2;
 
-            if(EraseCheckBox.isSelected())
+            if(eraserCheckbox.isSelected())
             {
                 graphics.clearRect(x, y, size, size);
             }
