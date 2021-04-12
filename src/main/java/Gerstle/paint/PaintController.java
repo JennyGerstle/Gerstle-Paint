@@ -6,8 +6,8 @@ import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ColorPicker;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Text;
 import javafx.scene.paint.Color;
 
 public class PaintController
@@ -15,21 +15,19 @@ public class PaintController
     @FXML
     private CheckBox eraserCheckbox;
     @FXML
-    private Text brushSize;
+    private TextField brushSize;
     @FXML
     private ColorPicker colorPic;
     @FXML
-    private CheckBox lineCheckBox;
-    @FXML
     private Button clearAll;
     @FXML
-    private Canvas canvas;
+    private PaintCanvas paintCanvas;
 
     public void initialize()
     {
-        GraphicsContext graphics = canvas.getGraphicsContext2D();
+        GraphicsContext graphics = paintCanvas.getGraphicsContext2D();
 
-        canvas.setOnMouseDragged(event ->
+        paintCanvas.setOnMouseDragged(event ->
         {
             double size = checkSize(brushSize.getText());
             brushSize.setText(Double.toString(size));
@@ -43,7 +41,7 @@ public class PaintController
             else
             {
                 graphics.setFill(colorPic.getValue());
-                graphics.fillRect(x, y, size, size);
+                graphics.fillRoundRect(x, y, size, size, size, size);
             }
         });
     }
@@ -61,8 +59,6 @@ public class PaintController
 
     public void clearAll(MouseEvent mouseEvent)
     {
-        GraphicsContext graphics = canvas.getGraphicsContext2D();
-        graphics.setFill(Color.WHITE);
-        graphics.fillRect(0, 1, canvas.getHeight(), canvas.getWidth());
+        paintCanvas.clear();
     }
 }
