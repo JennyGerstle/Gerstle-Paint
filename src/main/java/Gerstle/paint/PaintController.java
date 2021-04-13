@@ -13,15 +13,15 @@ import javafx.scene.paint.Color;
 public class PaintController
 {
     @FXML
-    private CheckBox eraserCheckbox;
+    CheckBox eraserCheckbox;
     @FXML
-    private TextField brushSize;
+    TextField brushSize;
     @FXML
-    private ColorPicker colorPic;
+    ColorPicker colorPic;
     @FXML
-    private Button clearAll;
+    Button clearAll;
     @FXML
-    private PaintCanvas paintCanvas;
+    PaintCanvas paintCanvas;
 
     public void initialize()
     {
@@ -55,10 +55,5 @@ public class PaintController
         {
             return 10;
         }
-    }
-
-    public void clearAll(MouseEvent mouseEvent)
-    {
-        paintCanvas.clear();
     }
 }

@@ -23,24 +23,5 @@
          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
       </GridPane.margin>
     </ColorPicker>
-    <Button fx:id="clearAll"  mnemonicParsing="false" text="clear" GridPane.columnIndex="8" GridPane.rowIndex="0">
-      <GridPane.margin>
-         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-      </GridPane.margin></Button>
     <PaintCanvas fx:id="paintCanvas" height="900" width="1600" GridPane.columnIndex="0" GridPane.columnSpan="9" GridPane.rowIndex="1" />
-   <columnConstraints>
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
 </GridPane>

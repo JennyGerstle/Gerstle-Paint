@@ -10,13 +10,4 @@ import javafx.scene.paint.Color;
  */
 public class PaintCanvas extends Canvas
 {
-    Canvas canvas = new Canvas(1600, 900);
-
-    public void clear ()
-    {
-        GraphicsContext graphics = canvas.getGraphicsContext2D();
-
-        graphics.setFill(Color.WHITE);
-        graphics.fillRect(0, 900, getWidth(), getHeight());
-    }
 }

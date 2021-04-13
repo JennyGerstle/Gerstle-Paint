@@ -3,6 +3,7 @@ package Gerstle.paint;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
 import javafx.stage.Stage;
 
 public class PaintApplication extends Application
