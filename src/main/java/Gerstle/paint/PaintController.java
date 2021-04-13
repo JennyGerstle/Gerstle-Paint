@@ -3,12 +3,9 @@ package Gerstle.paint;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ColorPicker;
 import javafx.scene.control.TextField;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.paint.Color;
 
 public class PaintController
 {
@@ -19,15 +16,13 @@ public class PaintController
     @FXML
     ColorPicker colorPic;
     @FXML
-    Button clearAll;
-    @FXML
-    PaintCanvas paintCanvas;
+    Canvas canvas;
 
     public void initialize()
     {
-        GraphicsContext graphics = paintCanvas.getGraphicsContext2D();
+        GraphicsContext graphics = canvas.getGraphicsContext2D();
 
-        paintCanvas.setOnMouseDragged(event ->
+        canvas.setOnMouseDragged(event ->
         {
             double size = checkSize(brushSize.getText());
             brushSize.setText(Double.toString(size));

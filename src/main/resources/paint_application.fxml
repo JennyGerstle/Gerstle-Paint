@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
+<?import javafx.scene.canvas.Canvas?>
 <GridPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1">
     <CheckBox fx:id="eraserCheckbox" mnemonicParsing="false" text="Eraser " GridPane.columnIndex="0" GridPane.rowIndex="0">
       <GridPane.margin>
@@ -23,5 +24,5 @@
          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
       </GridPane.margin>
     </ColorPicker>
-    <PaintCanvas fx:id="paintCanvas" height="900" width="1600" GridPane.columnIndex="0" GridPane.columnSpan="9" GridPane.rowIndex="1" />
+    <Canvas fx:id="canvas" height="900" width="1600" GridPane.columnIndex="0" GridPane.columnSpan="9" GridPane.rowIndex="1" />
 </GridPane>

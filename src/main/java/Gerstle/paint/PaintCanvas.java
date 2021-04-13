@@ -10,4 +10,5 @@ import javafx.scene.paint.Color;
  */
 public class PaintCanvas extends Canvas
 {
+
 }
